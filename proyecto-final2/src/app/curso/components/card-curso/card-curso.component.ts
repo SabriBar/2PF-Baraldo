@@ -24,14 +24,8 @@ export class CardCursoComponent implements OnInit {
     this.cursos$ = this.cursosService.obtenerCursosObservable();
   }
 
-  deleteCurso(index: number) {
-    this.abmService.deleteCurso(index);
-
-    this.snackBar.open('  Alumno eliminado correctamente', '', {
-      duration: 1500,
-      horizontalPosition: 'left',
-      verticalPosition: 'bottom'
-    })
+  deleteCurso(curso: Curso){
+    this.abmService.deleteCurso(curso);
   }
-
 }
+

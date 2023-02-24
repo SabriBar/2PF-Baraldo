@@ -70,5 +70,5 @@ export class CursosService {
   obtenerCursosObservable(): Observable<Curso[]>{
     return this.cursos$.asObservable();
   }
-  
+
 }
