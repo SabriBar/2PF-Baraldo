@@ -19,7 +19,7 @@
         <img mat-card-image src={{curso.imagen}}>
         <mat-card-content>
           <p>Dictado por:  {{ curso.profesor.nombre }}</p>
-          <p> Inscripcion abierta: {{ curso.inscripcionAbierta | booleanTransform: 'Si':'No'  }}</p>
+          <p> Inscripcion {{ curso.inscripcionAbierta | booleanTransform: 'Abierta':'Cerrada'  }}</p>
         </mat-card-content>
         <mat-card-actions>
           <button routerLink='/edit-curso' mat-flat-button color="primary">

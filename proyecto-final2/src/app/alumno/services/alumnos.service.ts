@@ -19,7 +19,7 @@ export class AlumnosService {
           nombre: 'Minerva',
           correo: 'minerva@gmail.com'
         },
-        inscripcionAbierta: true
+        inscripcionAbierta: 'Abierta'
       },
       comision: 100, email: 'juanrodri@gmail.com'
     },
@@ -35,7 +35,7 @@ export class AlumnosService {
           nombre: 'Garrison',
           correo: 'mrGarrison@gmail.com'
         },
-        inscripcionAbierta: false
+        inscripcionAbierta: 'Cerrada'
       },
       comision: 101, email: 'garcia_mario@gmail.com'
     },
@@ -51,7 +51,7 @@ export class AlumnosService {
           nombre: 'Walter',
           correo: 'walterwh@gmail.com'
         },
-        inscripcionAbierta: true
+        inscripcionAbierta: 'Abierta'
       },
       comision: 103,
       email: 'ana1lopez@gmail.com'
@@ -67,7 +67,7 @@ export class AlumnosService {
           nombre: 'Albus',
           correo: 'albus@gmail.com'
         },
-        inscripcionAbierta: false
+        inscripcionAbierta: 'Cerrada'
       },
       comision: 105,
       email: 'carlistosm@gmail.com'
@@ -83,7 +83,7 @@ export class AlumnosService {
           nombre: 'Minerva',
           correo: 'minerva@gmail.com'
         },
-        inscripcionAbierta: true
+        inscripcionAbierta: 'Abierta'
       },
       comision: 100,
       email: 'josehernandez@gmail.com'
@@ -99,7 +99,7 @@ export class AlumnosService {
           nombre: 'Indiana',
           correo: 'indianaj@gmail.com'
         },
-        inscripcionAbierta: false
+        inscripcionAbierta: 'Cerrada'
       },
       comision: 108,
       email: 'lauperez@gmail.com'
@@ -115,7 +115,7 @@ export class AlumnosService {
           nombre: 'Garrison',
           correo: 'mrGarrison@gmail.com'
         },
-        inscripcionAbierta: false
+        inscripcionAbierta: 'Cerrada'
       },
       comision: 101,
       email: 'pepesanchez@gmail.com'

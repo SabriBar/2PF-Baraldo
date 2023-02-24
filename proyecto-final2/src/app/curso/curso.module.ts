@@ -7,8 +7,8 @@ import { RouterModule } from '@angular/router';
 import { AgregarCursoComponent } from './components/abm-curso/agregar-curso/agregar-curso.component';
 import { ModificarCursoComponent } from './components/abm-curso/modificar-curso/modificar-curso.component';
 import { BooleanTransformPipe } from './pipes/boolean-transform.pipe';
-import { FechaPipe } from './pipes/fecha.pipe';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -17,13 +17,13 @@ import { ReactiveFormsModule } from '@angular/forms';
     CardCursoComponent,
     AgregarCursoComponent,
     ModificarCursoComponent,
-    BooleanTransformPipe,
-    FechaPipe
+    BooleanTransformPipe
   ],
   imports: [
     CommonModule,
     MaterialModule,
     RouterModule,
+    SharedModule,
     ReactiveFormsModule,
     CursoRoutingModule
   ],

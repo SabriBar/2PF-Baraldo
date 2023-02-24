@@ -49,7 +49,7 @@ export class AgregarAlumnoComponent implements OnInit {
           nombre: 'Minerva',
           correo: 'minerva@gmail.com'
         },
-        inscripcionAbierta: true
+        inscripcionAbierta: 'Abierta'
       },
       comision: this.form.value.comision,
       email: this.form.value.email

@@ -1,0 +1,67 @@
+<div class="container">
+    <div class="subtittle">
+        <h2 class="agregar-inscripcion" appTituloEstilo>Nueva Inscripcion</h2>
+    </div>
+
+    <mat-card style="margin-top: 1rem; margin-left: 1rem;">
+        <form [formGroup]="form" (ngSubmit)="createInscripcion()">
+            <mat-grid-list cols="4" rowHeight="70px">
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <mat-form-field class="ancho">
+                        <mat-label>Numero</mat-label>
+                        <input matInput autocomplete="off" formControlName="numero">
+                    </mat-form-field>
+                    <div class="valido" *ngIf="form.controls['numero'].valid">Campo correcto</div>
+                        <div class="invalido"
+                            *ngIf="form.controls['numero'].dirty && form.controls['numero'].errors?.['required']">
+                            Completar</div>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="3" [rowspan]="6">
+                    <img src="../../../../../assets/inscripcion.jpg">
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <mat-form-field class="ancho" appearance="fill">
+                        <mat-label>Seleccionar Curso</mat-label>
+                        <mat-select formControlName="curso">
+                          <mat-option *ngFor="let item of curso" [value]="item">{{item}}</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <mat-form-field class="ancho">
+                        <mat-label>Comision</mat-label>
+                        <input matInput autocomplete="off" formControlName="comision">
+                    </mat-form-field>
+                    <div class="valido" *ngIf="form.controls['comision'].valid">Campo correcto</div>
+                        <div class="invalido"
+                            *ngIf="form.controls['comision'].dirty && form.controls['comision'].errors?.['required']">
+                            Completar</div>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <mat-form-field class="ancho">
+                        <mat-label>Alumno</mat-label>
+                        <input matInput autocomplete="off" formControlName="alumno">
+                    </mat-form-field>
+                    <div class="valido" *ngIf="form.controls['alumno'].valid">Campo correcto</div>
+                        <div class="invalido"
+                            *ngIf="form.controls['alumno'].dirty && form.controls['alumno'].errors?.['required']">
+                            Completar</div>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <mat-form-field class="ancho">
+                        <mat-label>Profesor</mat-label>
+                        <input matInput autocomplete="off" formControlName="profesor">
+                    </mat-form-field>
+                    <div class="valido" *ngIf="form.controls['profesor'].valid">Campo correcto</div>
+                        <div class="invalido"
+                            *ngIf="form.controls['profesor'].dirty && form.controls['profesor'].errors?.['required']">
+                            Completar</div>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid"
+                        style="margin: 1rem; width: 60%;">Guardar</button>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </form>
+    </mat-card>
+</div>

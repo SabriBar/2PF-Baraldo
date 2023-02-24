@@ -16,3 +16,7 @@ span{
     font-weight: bolder;
     letter-spacing: .05rem;
 }
+
+a{
+    text-decoration: none;
+}

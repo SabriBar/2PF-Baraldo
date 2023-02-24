@@ -17,7 +17,7 @@ export class CursosService {
         nombre: 'Minerva',
         correo: 'minerva@gmail.com'
       },
-      inscripcionAbierta: true
+      inscripcionAbierta: 'Abierta'
     },
     {
       nombre: 'Javascript', 
@@ -27,7 +27,7 @@ export class CursosService {
         nombre: 'Garrison',
         correo: 'mrGarrison@gmail.com'
       },
-      inscripcionAbierta: false
+      inscripcionAbierta: 'Cerrada'
     },
     {
       nombre: 'Python', 
@@ -37,7 +37,7 @@ export class CursosService {
         nombre: 'Walter',
         correo: 'walterwh@gmail.com'
       },
-      inscripcionAbierta: true
+      inscripcionAbierta: 'Abierta'
     },
     {
       nombre: 'Diseño UX', 
@@ -47,7 +47,7 @@ export class CursosService {
         nombre: 'Albus',
         correo: 'albus@gmail.com'
       },
-      inscripcionAbierta: false
+      inscripcionAbierta: 'Cerrada'
     },
     {
       nombre: 'SQL', 
@@ -57,7 +57,7 @@ export class CursosService {
         nombre: 'Indiana',
         correo: 'indianaj@gmail.com'
       },
-      inscripcionAbierta: false
+      inscripcionAbierta: 'Cerrada'
     }
   ];
   public cursos$!: BehaviorSubject<Curso[]>;

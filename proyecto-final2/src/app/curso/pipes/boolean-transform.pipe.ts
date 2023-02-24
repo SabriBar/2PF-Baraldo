@@ -5,8 +5,12 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class BooleanTransformPipe implements PipeTransform {
 
-  transform(Boolean: boolean, ...args: any[]): string {
-    return Boolean ? args[0] : args[1];
+  transform(Boolean: string, ...args: any[]): string {
+    if(Boolean === 'Abierta'){
+    return args[0];
   }
-
+  else{
+    return args[1];
+  }
+  }
 }

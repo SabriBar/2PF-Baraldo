@@ -50,7 +50,7 @@ export class ModificarAlumnoComponent implements OnInit {
           nombre: 'Minerva',
           correo: 'minerva@gmail.com'
         },
-        inscripcionAbierta: true
+        inscripcionAbierta: 'Abierta'
       },
       comision: this.formulario.value.comision,
       email: this.formulario.value.email

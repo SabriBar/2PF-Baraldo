@@ -5,5 +5,5 @@ export interface Curso{
     comision: string;
     imagen: string;
     profesor: Profesor;
-    inscripcionAbierta: boolean;
+    inscripcionAbierta: string;
 }
