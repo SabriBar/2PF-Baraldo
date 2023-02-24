@@ -1,3 +1,4 @@
+import { JsonPipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -15,28 +16,30 @@ export class ModificarCursoComponent implements OnInit {
   inscripcion: any[] = ['Abierta', 'Cerrada'];
 
   constructor(
-    private fb: FormBuilder,
     private abmService: AbmService,
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private snackBar: MatSnackBar
-  ) { 
-    this.form = this.fb.group({
-      nombre: new FormControl('', Validators.required),
-      comision: new FormControl('', Validators.required),
-      profesor: new FormControl('', Validators.required),
-      inscripcionAbierta: new FormControl('', Validators.required)
-    })
-  }
+  ) { }
 
   ngOnInit(): void {
+    this.activatedRoute.paramMap.subscribe((parametros) => {
+      console.log(parametros);
+
+      this.form = new FormGroup({
+        nombre: new FormControl(parametros.get('nombre'), Validators.required),
+        comision: new FormControl(parametros.get('comision'), Validators.required),
+        profesor: new FormControl(parametros.get('profesor.nombre'), Validators.required),
+        inscripcionAbierta: new FormControl(parametros.get('inscripcionAbierta'), Validators.required)
+      })
+    })
   }
 
   editCurso() {
     let curso: Curso = {
       nombre: this.form.value.nombre,
       comision: this.form.value.comision,
-      imagen: './../../../../assets/cursoEditado.jpeg',
+      imagen: './../../../../assets/cursoEditado.png',
       profesor: {
         nombre: this.form.value.profesor,
         correo: 'minerva@gmail.com'

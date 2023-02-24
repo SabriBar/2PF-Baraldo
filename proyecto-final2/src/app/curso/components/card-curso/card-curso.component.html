@@ -22,7 +22,7 @@
           <p> Inscripcion {{ curso.inscripcionAbierta | booleanTransform: 'Abierta':'Cerrada'  }}</p>
         </mat-card-content>
         <mat-card-actions>
-          <button routerLink='/edit-curso' mat-flat-button color="primary">
+          <button (click)="redirigirEditCurso(curso)" mat-flat-button color="primary">
             Editar
           </button>
           <button mat-flat-button color="warn" (click)="deleteCurso(curso)">

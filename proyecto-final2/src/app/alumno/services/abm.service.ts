@@ -16,8 +16,13 @@ export class AbmService {
     this.alumnosService.alumnos.unshift(alumno);
   }
 
-  editAlumno(alumno: Alumno): void{
-    this.alumnosService.alumnos.unshift(alumno);
+  editAlumno(element: Alumno): void{
+    let indice = this.alumnosService.alumnos.findIndex((a: Alumno) => a.nombre === element.nombre);
+
+    if(indice > -1){
+      this.alumnosService.alumnos[indice] = element;
+      this.alumnosService.alumnos$.next(this.alumnosService.alumnos);
+    }
   }
 
   deleteAlumno(index: number){

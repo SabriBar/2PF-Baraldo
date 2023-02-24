@@ -15,8 +15,13 @@ export class AbmService {
     this.cursosService.cursos.unshift(curso);
   }
 
-  editCurso(curso: Curso): void {
-    this.cursosService.cursos.unshift(curso);
+  editCurso(curso: Curso): void{
+    let indice = this.cursosService.cursos.findIndex((c: Curso) => c.comision === curso.comision);
+
+    if(indice > -1){
+      this.cursosService.cursos[indice] = curso;
+      this.cursosService.cursos$.next(this.cursosService.cursos);
+    }
   }
 
   deleteCurso(curso: Curso): void {

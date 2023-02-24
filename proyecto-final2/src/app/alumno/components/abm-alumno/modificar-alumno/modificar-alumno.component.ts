@@ -31,7 +31,7 @@ export class ModificarAlumnoComponent implements OnInit {
       this.formulario = new FormGroup({
         nombre: new FormControl(parametros.get('nombre'), Validators.required),
         apellido: new FormControl(parametros.get('apellido'), Validators.required),
-        curso: new FormControl(parametros.get('curso'), Validators.required),
+        curso: new FormControl(parametros.get('curso.nombre'), Validators.required),
         comision: new FormControl(parametros.get('comision'), Validators.required),
         email: new FormControl(parametros.get('email'), [Validators.required, Validators.pattern(regexCorreo)])
       })
@@ -39,7 +39,7 @@ export class ModificarAlumnoComponent implements OnInit {
   }
 
   editAlumno() {
-    let alumno: Alumno = {
+    let element: Alumno = {
       nombre: this.formulario.value.nombre,
       apellido: this.formulario.value.apellido,
       curso: {
@@ -56,7 +56,7 @@ export class ModificarAlumnoComponent implements OnInit {
       email: this.formulario.value.email
     }
 
-    this.abmService.editAlumno(alumno);
+    this.abmService.editAlumno(element);
     this.router.navigate([''])
 
     this.snackBar.open('  Alumno modificado correctamente', '', {

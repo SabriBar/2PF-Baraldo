@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 import { Curso } from 'src/app/shared/models/curso';
 import { CursosService } from '../../services/cursos.service';
 import { AbmService } from '../../services/abm.service';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-card-curso',
@@ -17,7 +17,7 @@ export class CardCursoComponent implements OnInit {
   constructor(
     private cursosService: CursosService,
     private abmService: AbmService,
-    private snackBar: MatSnackBar
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -27,5 +27,10 @@ export class CardCursoComponent implements OnInit {
   deleteCurso(curso: Curso){
     this.abmService.deleteCurso(curso);
   }
+
+  redirigirEditCurso(curso: Curso){
+    this.router.navigate(['/edit-curso', curso]);
+  }
 }
+
 

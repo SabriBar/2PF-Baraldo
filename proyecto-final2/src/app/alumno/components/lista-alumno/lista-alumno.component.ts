@@ -2,7 +2,8 @@ import { AfterViewInit, Component, OnDestroy, OnInit, ViewChild } from '@angular
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatTableDataSource } from '@angular/material/table';
-import { Subscription } from 'rxjs';
+import { Router } from '@angular/router';
+import { Observable, Subscription } from 'rxjs';
 import { Alumno } from 'src/app/shared/models/alumno';
 import { AbmService } from '../../services/abm.service';
 import { AlumnosService } from '../../services/alumnos.service';
@@ -23,7 +24,8 @@ export class ListaAlumnoComponent implements OnInit, OnDestroy, AfterViewInit {
   constructor(
     public alumnoService: AlumnosService,
     private abmService: AbmService,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    private router: Router
   ) { }
 
 
@@ -67,4 +69,7 @@ export class ListaAlumnoComponent implements OnInit, OnDestroy, AfterViewInit {
     })
   }
 
+  redirigirEditAlumno(element: Alumno) {
+    this.router.navigate(['/edit-alumno', element]);
+  }
 }
