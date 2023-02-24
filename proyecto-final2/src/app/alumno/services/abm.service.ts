@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Alumno } from 'src/app/models/alumno';
+import { Alumno } from 'src/app/shared/models/alumno';
 import { AlumnosService } from './alumnos.service';
 
 @Injectable({

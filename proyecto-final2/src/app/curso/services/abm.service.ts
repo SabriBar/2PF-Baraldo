@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Curso } from 'src/app/models/curso';
+import { Curso } from 'src/app/shared/models/curso';
 import { CursosService } from './cursos.service';
 
 @Injectable({

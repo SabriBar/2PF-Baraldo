@@ -3,7 +3,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatTableDataSource } from '@angular/material/table';
 import { Subscription } from 'rxjs';
-import { Alumno } from 'src/app/models/alumno';
+import { Alumno } from 'src/app/shared/models/alumno';
 import { AbmService } from '../../services/abm.service';
 import { AlumnosService } from '../../services/alumnos.service';
 

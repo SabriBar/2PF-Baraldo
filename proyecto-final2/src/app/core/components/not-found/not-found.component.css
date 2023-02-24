@@ -1,0 +1,12 @@
+*{
+    background-color: #FF7153;
+}
+
+body{
+    margin: 0%;
+    padding: 0%;
+    background-image: url(../../../../assets/404.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}

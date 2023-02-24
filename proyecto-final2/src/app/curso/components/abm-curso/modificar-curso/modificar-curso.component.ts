@@ -3,7 +3,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AbmService } from 'src/app/curso/services/abm.service';
-import { Curso } from 'src/app/models/curso';
+import { Curso } from 'src/app/shared/models/curso';
 
 @Component({
   selector: 'app-modificar-curso',

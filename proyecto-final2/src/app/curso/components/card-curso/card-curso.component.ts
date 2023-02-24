@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Curso } from 'src/app/models/curso';
+import { Curso } from 'src/app/shared/models/curso';
 import { CursosService } from '../../services/cursos.service';
 import { AbmService } from '../../services/abm.service';
 import { MatSnackBar } from '@angular/material/snack-bar';

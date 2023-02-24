@@ -4,7 +4,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AbmService } from 'src/app/alumno/services/abm.service';
-import { Alumno } from 'src/app/models/alumno';
+import { Alumno } from 'src/app/shared/models/alumno';
 
 @Component({
   selector: 'app-modificar-alumno',

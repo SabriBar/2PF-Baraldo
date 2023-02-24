@@ -3,10 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LayoutModule } from './layout/layout.module';
 import { AlumnoModule } from './alumno/alumno.module';
 import { CursoModule } from './curso/curso.module';
 import { InscripcionesModule } from './inscripciones/inscripciones.module';
+import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
@@ -16,9 +17,10 @@ import { InscripcionesModule } from './inscripciones/inscripciones.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    LayoutModule,
+    CoreModule,
     AlumnoModule,
     CursoModule,
+    SharedModule,
     InscripcionesModule,
     AppRoutingModule   
   ],

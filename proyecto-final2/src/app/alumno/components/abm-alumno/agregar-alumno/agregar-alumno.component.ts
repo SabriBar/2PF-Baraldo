@@ -3,7 +3,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { AbmService } from 'src/app/alumno/services/abm.service';
-import { Alumno } from 'src/app/models/alumno';
+import { Alumno } from 'src/app/shared/models/alumno';
 
 @Component({
   selector: 'app-agregar-alumno',

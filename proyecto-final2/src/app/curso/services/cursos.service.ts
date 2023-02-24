@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { url } from 'inspector';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { Curso } from 'src/app/models/curso';
+import { Curso } from 'src/app/shared/models/curso';
 
 @Injectable({
   providedIn: 'root'
