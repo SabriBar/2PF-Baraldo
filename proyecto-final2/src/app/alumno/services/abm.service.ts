@@ -17,7 +17,7 @@ export class AbmService {
   }
 
   editAlumno(element: Alumno): void{
-    let indice = this.alumnosService.alumnos.findIndex((a: Alumno) => a.nombre === element.nombre);
+    let indice = this.alumnosService.alumnos.findIndex((a: Alumno) => a.curso.profesor.nombre === element.curso.profesor.nombre);
 
     if(indice > -1){
       this.alumnosService.alumnos[indice] = element;

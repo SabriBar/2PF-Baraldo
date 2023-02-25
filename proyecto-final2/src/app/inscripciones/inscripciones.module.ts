@@ -6,12 +6,14 @@ import { MaterialModule } from '../material.module';
 import { SharedModule } from '../shared/shared.module';
 import { AgregarInscripcionComponent } from './components/abm-inscripcion/agregar-inscripcion/agregar-inscripcion.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ModificarInscripcionComponent } from './components/abm-inscripcion/modificar-inscripcion/modificar-inscripcion.component';
 
 
 @NgModule({
   declarations: [
     ListaInscripcionComponent,
-    AgregarInscripcionComponent
+    AgregarInscripcionComponent,
+    ModificarInscripcionComponent
   ],
   imports: [
     CommonModule,

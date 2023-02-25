@@ -15,8 +15,13 @@ export class AbmService {
     this.inscripcionService.inscripciones.unshift(inscripcion);
   }
 
-  editInscripcion(inscripcion: Inscripcion): void{
-    this.inscripcionService.inscripciones.unshift(inscripcion);
+  editInscripcion(element: Inscripcion): void{
+    let indice = this.inscripcionService.inscripciones.findIndex((i: Inscripcion) => i.curso.profesor.correo === element.curso.profesor.correo);
+
+    if(indice > -1){
+      this.inscripcionService.inscripciones[indice] = element;
+      this.inscripcionService.inscripciones$.next(this.inscripcionService.inscripciones);
+    }
   }
 
   deleteInscripcion(index: number){

@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatTableDataSource } from '@angular/material/table';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Inscripcion } from 'src/app/shared/models/inscripcion';
 import { AbmService } from '../../service/abm.service';
@@ -17,13 +18,14 @@ export class ListaInscripcionComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   dataSource!: MatTableDataSource<Inscripcion>;
-  columnas: string[] = ['id', 'curso', 'comision', 'alumno', 'profesor'];
+  columnas: string[] = ['id', 'curso', 'comision', 'alumno', 'profesor', 'acciones'];
   suscripcion!: Subscription;
 
   constructor(
     public inscripcionService: InscripcionService,
     private abmService: AbmService,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    private router: Router
   ) { }
 
 
@@ -65,6 +67,10 @@ export class ListaInscripcionComponent implements OnInit {
       horizontalPosition: 'left',
       verticalPosition: 'bottom'
     })
+  }
+
+  redirigirEditInscripcion(element: Inscripcion) {
+    this.router.navigate(['/edit-inscripcion', element]);
   }
 
 }

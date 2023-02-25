@@ -9,7 +9,7 @@ export class InscripcionService {
 
   public inscripciones: Inscripcion[] = [
     {
-      id: 1,
+      id: 7,
       curso: {
         nombre: 'Angular',
         comision: '100',
@@ -43,7 +43,7 @@ export class InscripcionService {
     },
 
     {
-      id: 2,
+      id: 6,
       curso: {
         nombre: 'Javascript',
         comision: '101',
@@ -77,7 +77,7 @@ export class InscripcionService {
     },
 
     {
-      id: 3,
+      id: 5,
       curso: {
         nombre: 'Python',
         comision: '103',
@@ -145,7 +145,7 @@ export class InscripcionService {
       }
     },
     {
-      id: 5,
+      id: 3,
       curso: {
         nombre: 'Angular',
         comision: '100',
@@ -179,7 +179,7 @@ export class InscripcionService {
       }
     },
     {
-      id: 6,
+      id: 2,
       curso: {
         nombre: 'SQL',
         comision: '108',
@@ -213,7 +213,7 @@ export class InscripcionService {
       }
     },
     {
-      id: 7,
+      id: 1,
       curso: {
         nombre: 'Javascript',
         comision: '101',
