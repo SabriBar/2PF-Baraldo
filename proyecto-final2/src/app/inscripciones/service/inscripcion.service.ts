@@ -34,7 +34,8 @@ export class InscripcionService {
           },
           inscripcionAbierta: 'Abierta'
         },
-        comision: 100, email: 'juanrodri@gmail.com'
+        comision: 100, 
+        email: 'juanrodri@gmail.com'
       },
       profesor: {
         nombre: 'Minerva',
@@ -68,7 +69,8 @@ export class InscripcionService {
           },
           inscripcionAbierta: 'Cerrada'
         },
-        comision: 101, email: 'garcia_mario@gmail.com'
+        comision: 101,
+         email: 'garcia_mario@gmail.com'
       },
       profesor: {
         nombre: 'Garrison',

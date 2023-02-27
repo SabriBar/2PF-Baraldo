@@ -16,7 +16,7 @@ export class AbmService {
   }
 
   editInscripcion(element: Inscripcion): void{
-    let indice = this.inscripcionService.inscripciones.findIndex((i: Inscripcion) => i.curso.profesor.correo === element.curso.profesor.correo);
+    let indice = this.inscripcionService.inscripciones.findIndex((i: Inscripcion) => i.profesor.correo === element.profesor.correo);
 
     if(indice > -1){
       this.inscripcionService.inscripciones[indice] = element;

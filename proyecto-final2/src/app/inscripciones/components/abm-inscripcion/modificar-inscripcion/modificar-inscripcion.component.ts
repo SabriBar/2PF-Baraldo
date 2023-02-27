@@ -63,7 +63,8 @@ export class ModificarInscripcionComponent implements OnInit {
           },
           inscripcionAbierta: 'Abierta'
         },
-        comision: 100, email: 'juanrodri@gmail.com'
+        comision: 100, 
+        email: 'juanrodri@gmail.com'
       },
       profesor: {
         nombre: this.form.value.profesor,
